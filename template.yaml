@@ -1,0 +1,442 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  buildingblocks-backend
+
+  Sample SAM Template for buildingblocks-backend
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 300
+
+
+Parameters:
+  Env:
+    Type: String
+    AllowedValues:
+      - local
+      - dev
+      - stage
+      - prod
+      - test
+    Default: test
+  # buildingblocksTableName1:
+  #   Type: String
+  #   Default: Jobinterest_dev
+  # buildingblocksTableName2:
+  #   Type: String
+  #   Default: Schools_dev
+  # buildingblocksTableName3:
+  #   Type: String
+  #   Default: User_dev
+  # buildingblocksTableName4:
+  #   Type: String
+  #   Default: Notes_dev
+  # buildingblocksTableName5:
+  #   Type: String
+  #   Default: Blocks_dev
+  # buildingblocksTableName6:
+  #   Type: String
+  #   Default: Interests_dev
+
+Resources:
+  buildingblocksFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: buildingblocks/
+      Handler: app.app
+      Runtime: python3.8
+      # Environment:
+      #   Variables:
+      #     TABLE_NAME: !Ref buildingblocksTableName1
+      #     REGION_NAME: !Ref AWS::Region
+      #     EXEC_ENV: !Ref Env
+      # Policies:
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref JobsTable
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref SchoolsTable
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref UserTable
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref NotesTable
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref BlocksTable
+      #   - DynamoDBCrudPolicy:
+      #       TableName:
+      #         !Ref InterestsTable
+      Events:
+        HealthCheck:
+          Type: Api 
+          Properties:
+            Path: /api/health-check
+            Method: get
+            RestApiId: !Ref ApiDeployment
+        # MainInfo:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/main-info
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # InsertBlocks:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/insert-blocks
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # InsertJobinterest:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/insert-job-interest
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # InsertSchooldata:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/insert-schools
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # InsertInterests:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/insert-interests
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # ListBlocks:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/list-blocks
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # ListBuckets:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/list-buckets
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # GetResourceDescription:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/get-resource-description/{block_slug}/{bucket_slug}/{element_slug}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # GetResources:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/get-resources
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # StateSearch:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/state-search
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # DistrictSearch:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/district-search/{state_id}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # SchoolSearch:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/school-search/{district_id}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # JobLevellist:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/job-level
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # JobRolelist:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/job-role/{job_id}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # UserCreate:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/user-create
+        #     Method: post
+        #     RestApiId: !Ref ApiDeployment
+        # UserUpdate:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/user-update
+        #     Method: put
+        #     RestApiId: !Ref ApiDeployment
+        # GetUser:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/get-user/{user_id}
+        #     Method: post
+        #     RestApiId: !Ref ApiDeployment
+        # CreateNote:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/create-notes
+        #     Method: post
+        #     RestApiId: !Ref ApiDeployment
+        # EditNote:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/create-notes
+        #     Method: put
+        #     RestApiId: !Ref ApiDeployment
+        # SavedNotes:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/saved-notes/{user_id}/{bucket_slug}/{element_slug}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # NoteTimestamp:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/note-time-stamp/{user_id}/{block_slug}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # ListNotes:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/list-notes
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # LastNotesSaved:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/last-saved-notes/{user_id}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # DeleteNote:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/del-note/{note_id}
+        #     Method: delete
+        #     RestApiId: !Ref ApiDeployment
+        # GetUserInterests:
+        #   Type: Api 
+        #   Properties:
+        #     Path: /api/get-user-interests/{user_id}
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+        # DownloadNotesPdf:
+        #   Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+        #   Properties:
+        #     Path: /api/generate-notes-pdf
+        #     Method: get
+        #     RestApiId: !Ref ApiDeployment
+
+  ApiDeployment:
+      Type: AWS::Serverless::Api
+      Properties:
+        StageName: !Ref Env
+        Cors:
+          AllowMethods: "'POST, GET, PUT, DELETE, OPTIONS'"
+          AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+          AllowOrigin: "'*'"
+          MaxAge: "'600'"
+
+  Userpool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        Policies: 
+            PasswordPolicy: 
+              MinimumLength: 6
+              RequireLowercase: true
+              RequireNumbers: true
+              RequireSymbols: true
+              RequireUppercase: true
+              TemporaryPasswordValidityDays: 365
+        Schema:
+          - Name: name
+            Mutable: true
+            Required: true
+        
+        AccountRecoverySetting:
+          RecoveryMechanisms: 
+            - Name: verified_email
+              Priority: 1
+            - Name: verified_phone_number
+              Priority: 2
+        
+        UsernameAttributes:
+          - email
+        
+        AutoVerifiedAttributes:
+          - email
+        UserPoolName: buildingblocks-Users-Testing
+        
+        AdminCreateUserConfig:
+          InviteMessageTemplate: 
+            EmailMessage: "Hi. Your username is {username} and temporary password is {####}." 
+            EmailSubject: "Your temporary password"
+        VerificationMessageTemplate:
+          DefaultEmailOption: CONFIRM_WITH_CODE
+          EmailMessage: "Hi, Your verification code is {####}."
+          EmailSubject: "Your verification code"
+
+  Userpoolclient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties: 
+      ClientName: Default
+      GenerateSecret: false
+      RefreshTokenValidity: 30
+      UserPoolId: !Ref Userpool
+
+  # JobsTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #     TableName: !Ref buildingblocksTableName1
+  #     AttributeDefinitions:
+  #       - AttributeName: id
+  #         AttributeType: S
+  #     KeySchema:
+  #       - AttributeName: id
+  #         KeyType: HASH
+  #     ProvisionedThroughput:
+  #       ReadCapacityUnits: 10
+  #       WriteCapacityUnits: 10
+  
+  # SchoolsTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #       TableName: !Ref buildingblocksTableName2
+  #       AttributeDefinitions:
+  #         - AttributeName: id
+  #           AttributeType: S
+  #         - AttributeName: s_id
+  #           AttributeType: S
+  #         - AttributeName: District_id
+  #           AttributeType: S 
+  #       KeySchema:
+  #         - AttributeName: id
+  #           KeyType: HASH
+  #       ProvisionedThroughput:
+  #         ReadCapacityUnits: 20
+  #         WriteCapacityUnits: 100
+    
+  #       GlobalSecondaryIndexes:
+  #         - 
+  #           IndexName: s_id
+  #           KeySchema: 
+  #             - AttributeName: s_id
+  #               KeyType: HASH
+  #           Projection:
+  #             ProjectionType: INCLUDE
+  #             NonKeyAttributes:
+  #               - "State"
+  #               - "District_id"
+  #               - "District"
+  #           ProvisionedThroughput: 
+  #             ReadCapacityUnits: "20"
+  #             WriteCapacityUnits: "100"
+  #         - 
+  #           IndexName: District_id
+  #           KeySchema: 
+  #             - AttributeName: District_id
+  #               KeyType: HASH
+  #           Projection:
+  #             ProjectionType: INCLUDE
+  #             NonKeyAttributes:
+  #               - "District"
+  #               - "School_id"
+  #               - "Schools"
+  #               - "School_phn"
+  #               - "School_website"
+  #               - "mzip"
+  #           ProvisionedThroughput: 
+  #             ReadCapacityUnits: "20"
+  #             WriteCapacityUnits: "100"
+                  
+  
+  # UserTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #       TableName: !Ref buildingblocksTableName3
+  #       AttributeDefinitions:
+  #         - AttributeName: user_id
+  #           AttributeType: S
+  #       KeySchema:
+  #         - AttributeName: user_id
+  #           KeyType: HASH
+  #       ProvisionedThroughput:
+  #         ReadCapacityUnits: 10
+  #         WriteCapacityUnits: 10
+
+  # NotesTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #       TableName: !Ref buildingblocksTableName4
+  #       AttributeDefinitions:
+  #         - AttributeName: note_id
+  #           AttributeType: S
+  #         - AttributeName: user_id
+  #           AttributeType: S
+  #       KeySchema:
+  #         - AttributeName: note_id
+  #           KeyType: HASH
+  #       ProvisionedThroughput:
+  #         ReadCapacityUnits: 50
+  #         WriteCapacityUnits: 20
+  #       GlobalSecondaryIndexes:
+  #         - 
+  #           IndexName: user_id
+  #           KeySchema: 
+  #             - AttributeName: user_id
+  #               KeyType: HASH
+  #           Projection:
+  #             ProjectionType: ALL
+  #           ProvisionedThroughput: 
+  #             ReadCapacityUnits: "50"
+  #             WriteCapacityUnits: "20"
+
+  
+  # BlocksTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #       TableName: !Ref buildingblocksTableName5
+  #       AttributeDefinitions:
+  #         - AttributeName: block_slug
+  #           AttributeType: S
+  #       KeySchema:
+  #         - AttributeName: block_slug
+  #           KeyType: HASH
+  #       ProvisionedThroughput:
+  #         ReadCapacityUnits: 50
+  #         WriteCapacityUnits: 20
+
+  # InterestsTable:
+  #   Type: AWS::DynamoDB::Table
+  #   Properties:
+  #       TableName: !Ref buildingblocksTableName6
+  #       AttributeDefinitions:
+  #         - AttributeName: interest_slug
+  #           AttributeType: S
+  #       KeySchema:
+  #         - AttributeName: interest_slug
+  #           KeyType: HASH
+  #       ProvisionedThroughput:
+  #         ReadCapacityUnits: 10
+  #         WriteCapacityUnits: 10
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  buildingblocksApi:
+    Description: "API Gateway endpoint URL for Prod stage for buildingblocks function"
+    Value: !Sub "https://${ApiDeployment}.execute-api.${AWS::Region}.amazonaws.com/${Env}/"
+  buildingblocksFunction:
+    Description: "Building Blocks Lambda Function ARN"
+    Value: !GetAtt buildingblocksFunction.Arn
+  buildingblocksIamRole:
+    Description: "Implicit IAM Role created for BuildingBlocks function"
+    Value: !GetAtt buildingblocksFunction.Arn

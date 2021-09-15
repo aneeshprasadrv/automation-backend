@@ -1,0 +1,326 @@
+[
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-1",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "build-engagement",
+    "element": "1.1 Put relationships first.",
+    "element_slug": "put-relationships-first"
+  },
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-2",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "deepen-engagement",
+    "element": "2.1 Ensure that all assignments have a clear purpose and/or relevance.",
+    "element_slug": "ensure-that-all-assignments-have-clear-purpose-relevance"
+  },
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-3",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "deepen-engagement",
+    "element": " 2.4 Create structures that help students take ownership of their engagement",
+    "element_slug": "create-structures-that-help-students-take-ownership-of-their-engagement"
+  },
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-4",
+    "block_slug": "learning-priorities",
+    "block": "Set Priorities for Learning",
+    "bucket_slug": "establish-actionable-goals",
+    "element": "2.2 Understand students\\u2019 assets and gaps in grade-level knowledge to develop whole-group and individualized learning plans to enable long-term success.",
+    "element_slug": "understand-students-assets-and-gaps-in-grade-level-knowledge"
+  },
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-5",
+    "block_slug": "learning-priorities",
+    "block": "Set Priorities for Learning",
+    "bucket_slug": "establish-actionable-goals",
+    "element": "2.3 Determine how the various learning model(s) support your vision of teaching and learning.",
+    "element_slug": "how-various-learning-models-support-your-vision"
+  },
+  {
+    "interest": "Learning & Curriculum",
+    "interest_slug": "learning-curriculum-6",
+    "block_slug": "lead-for-equity",
+    "block": "Lead for Equity",
+    "bucket_slug": "prioritize-equity",
+    "element": "3.3 Incorporate equity and anti-racism in the curriculum and instruction",
+    "element_slug": "equity-anti-racism-in-curriculum-and-instruction"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-7",
+    "block_slug": "partner-with-families",
+    "block": "Partner with Families",
+    "bucket_slug": "build-foundation",
+    "element": "1.1 Create opportunities to listen to caregivers, understand their experiences, and acknowledge their realities.",
+    "element_slug": "listen-to-caregivers-understand-their-experiences-acknowledge-their-realities"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-8",
+    "block_slug": "partner-with-families",
+    "block": "Partner with Families",
+    "bucket_slug": "build-foundation",
+    "element": "1.2 Provide flexible methods of caregiver engagement.",
+    "element_slug": "provide-flexible-methods-of-caregiver-engagement"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-9",
+    "block_slug": "partner-with-families",
+    "block": "Partner with Families",
+    "bucket_slug": "prioritize-communication",
+    "element": "2.1 Ensure communication is accessible to all caregivers.",
+    "element_slug": "ensure-communication-is-accessible-to-all-caregivers"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-10",
+    "block_slug": "communicate-clearly",
+    "block": "Communicate Clearly",
+    "bucket_slug": "build-partnerships",
+    "element": "2.1 Survey stakeholders to understand their needs and inform your planning.",
+    "element_slug": "survey-stakeholders-to-understand-needs-inform-planning"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-11",
+    "block_slug": "communicate-clearly",
+    "block": "Communicate Clearly",
+    "bucket_slug": "build-partnerships",
+    "element": "2.2 Increase collaboration with parents and caregivers through regular two-way communication in accessible languages and for",
+    "element_slug": "increase-collaboration-with-parents-caregivers"
+  },
+  {
+    "interest": "Families & Communities",
+    "interest_slug": "families-communities-12",
+    "block_slug": "social-learning",
+    "block": "Integrate Social-Emotional Learning",
+    "bucket_slug": "build-systems-support",
+    "element": "3.3 Partner with families and guardians to recognize and reinforce social emotional learning and well-being of students.",
+    "element_slug": "partner-with-families-and-guardians-to-recognize-and-reinforce-social-emotional-learning"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-1",
+    "block_slug": "english-learners",
+    "block": "Address Needs of English Learners",
+    "bucket_slug": "attend-to-student-needs",
+    "element": "1.1 Ensure students feel welcomed, engaged, affirmed, and supported in their language and academic content development.",
+    "element_slug": "ensure-students-feel-welcomed-engaged-affirmed-and-supported"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-2",
+    "block_slug": "english-learners",
+    "block": "Address Needs of English Learners",
+    "bucket_slug": "attend-to-student-needs",
+    "element": "1.2 Continue to identify, reclassify, and monitor the progress of English Learners.",
+    "element_slug": "identify-reclassify-and-monitor-the-progress-of-english-learners"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-3",
+    "block_slug": "special-education",
+    "block": "Plan for Special Education",
+    "bucket_slug": "special-education-plan",
+    "element": "1.1 Determine how general education instruction will be made accessible for students with disabilities.",
+    "element_slug": "how-to-give-accessibility-for-general-education-instruction-to-students"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-4",
+    "block_slug": "special-education",
+    "block": "Plan for Special Education",
+    "bucket_slug": "special-education-plan",
+    "element": "1.2 Create case-specific plans for severe and low-incidence needs populations.",
+    "element_slug": "case-specific-plans-for-severe-and-low-incidence-needs-populations"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-5",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "deepen-engagement",
+    "element": "2.3 Allow for student voice and choice by providing multiple pathways and individualized pacing.",
+    "element_slug": "student-voice-and-choice-by-providing-multiple-pathways-and-individualized-pacing"
+  },
+  {
+    "interest": "Special Populations",
+    "interest_slug": "special-populations-6",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "build-engagement",
+    "element": "1.3 Adapt instructional strategies to meet student needs.",
+    "element_slug": "adapt-instructional-strategies-to-meet-student-needs"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-1",
+    "block_slug": "lead-for-equity",
+    "block": "Lead for Equity",
+    "bucket_slug": "raise-awareness-of-inequities-and-racism",
+    "element": "1.1 Understand the differences between equity and equality.",
+    "element_slug": "understand-differences-between-equity-and-equality"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-2",
+    "block_slug": "lead-for-equity",
+    "block": "Lead for Equity",
+    "bucket_slug": "plan-for-equity",
+    "element": "2.1 Examine district and school data to identify the inequities that exist with students and adults.",
+    "element_slug": "district-and-school-data-to-identify-inequities-that-exist-with-students-and-adults"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-3",
+    "block_slug": "communicate-clearly",
+    "block": "Communicate Clearly",
+    "bucket_slug": "build-partnerships",
+    "element": "2.1 Survey stakeholders to understand their needs and inform your planning.",
+    "element_slug": "survey-stakeholders-to-understand-needs-inform-planning"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-4",
+    "block_slug": "communicate-clearly",
+    "block": "Communicate Clearly",
+    "bucket_slug": "foster-connection-and-community",
+    "element": "3.2 Use your communications to build community and reinforce culture.",
+    "element_slug": "communications-build-community-reinforce-culture"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-5",
+    "block_slug": "learning-priorities",
+    "block": "Set Priorities for Learning",
+    "bucket_slug": "set-your-vision",
+    "element": "1.1 Identify guiding principles for teaching and learning that consider the needs and realities of current circumstances.",
+    "element_slug": "identify-guiding-principles-for-teaching-and-learning"
+  },
+  {
+    "interest": "School Culture & Leadership",
+    "interest_slug": "school-culuture-leadership-6",
+    "block_slug": "learning-priorities",
+    "block": "Set Priorities for Learning",
+    "bucket_slug": "set-your-vision",
+    "element": "1.3 Keep the needs of the most vulnerable students at the forefront.",
+    "element_slug": "needs-of-most-vulnerable-students-at-the-forefront"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-1",
+    "block_slug": "prepare-educators",
+    "block": "Prepare Educators",
+    "bucket_slug": "build-your-foundation",
+    "element": "1.1 Listen to educators and create ongoing opportunities to understand their experiences and challenges.",
+    "element_slug": "listen-educators-create-ongoing-opportunities"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-2",
+    "block_slug": "prepare-educators",
+    "block": "Prepare Educators",
+    "bucket_slug": "build-your-foundation",
+    "element": "1.2 Think expansively about educator roles and responsibilities.",
+    "element_slug": "educator-roles-and-responsibilities"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-3",
+    "block_slug": "prepare-educators",
+    "block": "Prepare Educators",
+    "bucket_slug": "develop-systems-and-structures",
+    "element": "2.2 Prepare and support teachers\\u2019 ability to monitor and assess student learning, well-being, and engagement.",
+    "element_slug": "teachers-ability-to-monitor-assess-student-learning-well-being-engagement"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-4",
+    "block_slug": "social-learning",
+    "block": "Integrate Social-Emotional Learning",
+    "bucket_slug": "sustain-educator-community",
+    "element": "1.1 Facilitate opportunities for educators to communicate, collaborate, and support one another.",
+    "element_slug": "opportunities-for-educators-to-communicate-collaborate-support"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-5",
+    "block_slug": "social-learning",
+    "block": "Integrate Social-Emotional Learning",
+    "bucket_slug": "sustain-educator-community",
+    "element": "1.2 Provide opportunities for educators to take care of their well-being.",
+    "element_slug": "opportunities-for-educators-to-communicate-collaborate-support"
+  },
+  {
+    "interest": "Teacher Development & Well-being",
+    "interest_slug": "teacher-development-well-being-6",
+    "block_slug": "social-learning",
+    "block": "Integrate Social-Emotional Learning",
+    "bucket_slug": "sustain-educator-community",
+    "element": "1.3 Support educators in understanding and implementing social-emotional learning as a lever for equity.",
+    "element_slug": "support-educators-in-understanding-implementing-social-emotional-learning"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-1",
+    "block_slug": "learning-priorities",
+    "block": "Set Priorities for Learning",
+    "bucket_slug": "set-your-vision",
+    "element": "1.1 Identify guiding principles for teaching and learning that consider the needs and realities of current circumstances.",
+    "element_slug": "identify-guiding-principles-for-teaching-and-learning"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-2",
+    "block_slug": "communicate-clearly",
+    "block": "Communicate Clearly",
+    "bucket_slug": "create-your-communication-system",
+    "element": "1.1 Analyze current system of communication to determine what has worked well, what has not worked, and what needs to be improved.",
+    "element_slug": "analyze-current-system-of-communication-to-determine"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-3",
+    "block_slug": "engage-learners",
+    "block": "Engage Learners",
+    "bucket_slug": "build-engagement",
+    "element": "1.1 Put relationships first.",
+    "element_slug": "put-relationships-first"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-4",
+    "block_slug": "lead-for-equity",
+    "block": "Lead for Equity",
+    "bucket_slug": "raise-awareness-of-inequities-and-racism",
+    "element": "1.1 Understand the differences between equity and equality.",
+    "element_slug": "understand-differences-between-equity-and-equality"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-5",
+    "block_slug": "social-learning",
+    "block": "Integrate Social-Emotional Learning",
+    "bucket_slug": "sustain-educator-community",
+    "element": "1.1 Facilitate opportunities for educators to communicate, collaborate, and support one another.",
+    "element_slug": "opportunities-for-educators-to-communicate-collaborate-support"
+  },
+  {
+    "interest": "Other",
+    "interest_slug": "other-6",
+    "block_slug": "prepare-educators",
+    "block": "Prepare Educators",
+    "bucket_slug": "build-your-foundation",
+    "element": "1.1 Listen to educators and create ongoing opportunities to understand their experiences and challenges.",
+    "element_slug": "listen-educators-create-ongoing-opportunities"
+  }
+]

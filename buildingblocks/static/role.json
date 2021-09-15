@@ -1,0 +1,19 @@
+[
+
+  {
+      "id": "1",
+      "job_level": [{"job_id": "1", "job_name":"Classroom",
+        "job_role" :["Department Head", "English Language Teacher", "General Education Teacher", "Paraprofessional", "Special Education Teacher", "Specialist", "Other"]},
+          {"job_id": "2", "job_name":"Building",
+            "job_role":["Diversity, Equity and Inclusion", "English Language Instruction", "Family Engagement", "Finance and Operations","Instruction & Curriculum", "Principal/Asst. Principal", "Special Education", "Student Support", "Technology", "Other"]},
+          {"job_id": "3", "job_name":"District",
+            "job_role":["Diversity, Equity and Inclusion", "English Language Instruction", "Family Engagement", "Finance and Operations", "Instruction & Curriculum", "Special Education", "Student Support", "Superindentent/Asst. Superintendent", "Technology", "Other"]},
+          {"job_id": "4", "job_name":"State",
+            "job_role":["Diversity, Equity and Inclusion", "Elected Official", "English Language Instruction", "Family Engagement", "Finance and Operations", "Instruction & Curriculum", "Special Education", "Student Support", "Technology", "Other"]},
+          {"job_id": "5", "job_name":"Other",
+            "job_role":["Board Member", "Consultant", "Ed Tech", "Higher Education", "Non-profit", "Student Caregiver", "Other"]}
+          ],
+      "interest":  ["Learning & Curriculum", "Families & Communities", "Special Populations", "School Culture & Leadership", "Teacher Development & Well-being", "Other"]
+  }
+
+]
