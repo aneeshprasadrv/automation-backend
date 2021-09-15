@@ -4,8 +4,8 @@ phases:
     commands:
       # Use AWS SAM to package the application by using AWS CloudFormation
       - aws cloudformation package --template-file template.yaml --s3-bucket buildingblocks-testing-backend-automation-artifact --output-template-file packaged.yaml
-  artifacts:
-    type: zip
-    files:
-      - template.yaml
-      - packaged.yaml
+artifacts:
+  type: zip
+  files:
+    - template.yaml
+    - packaged.yaml
