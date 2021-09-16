@@ -50,7 +50,7 @@ Metadata:
     Labels: ['tests']
     HomePageUrl: https://github.com/aneeshprasadrv/automation-backend
     SemanticVersion: 0.0.1
-    SourceCodeUrl: https://github.com/aneeshprasadrv/automation-backend
+    SourceCodeUrl: https://github.com/aneeshprasadrv/automation-backend  
 
 Resources:
   buildingblocksFunction:
@@ -90,7 +90,6 @@ Resources:
             Path: /api/health-check
             Method: get
             RestApiId: !Ref ApiDeployment
-        MainInfo:
         #   Type: Api 
         #   Properties:
         #     Path: /api/main-info
