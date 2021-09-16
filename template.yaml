@@ -41,15 +41,15 @@ Parameters:
 
 Metadata:
   AWS::ServerlessRepo::Application:
-    Name: my-app
-    Description: hello world
-    Author: user1
-    SpdxLicenseId: Apache-2.0
+    Name: buildingblocks-testing-app
+    Description: buildingblocks
+    Author: buildingblocks
+#    SpdxLicenseId: Apache-2.0
 #    LicenseUrl: LICENSE.txt
-    ReadmeUrl: README.md
-    Labels: ['tests']
+#    ReadmeUrl: README.md
+#    Labels: ['tests']
     HomePageUrl: https://github.com/aneeshprasadrv/automation-backend
-    SemanticVersion: 0.0.1
+#    SemanticVersion: 0.0.1
     SourceCodeUrl: https://github.com/aneeshprasadrv/automation-backend  
 
 Resources:
