@@ -45,7 +45,7 @@ Metadata:
     Description: hello world
     Author: user1
     SpdxLicenseId: Apache-2.0
-    LicenseUrl: LICENSE.txt
+#    LicenseUrl: LICENSE.txt
     ReadmeUrl: README.md
     Labels: ['tests']
     HomePageUrl: https://github.com/aneeshprasadrv/automation-backend
