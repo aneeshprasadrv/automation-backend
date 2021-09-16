@@ -1,11 +1,14 @@
 version: 0.2
 phases:
+  install:
+    runtime-versions:
+        python: 3.8
   build:
     commands:
       # Use AWS SAM to package the application by using AWS CloudFormation
-      - aws cloudformation package --template-file template.yaml --s3-bucket buildingblocks-testing-backend-automation-artifact --output-template-file packaged.yaml
+      - sam package --template-file template.yaml --s3-bucket buildingblocks-testing-backend-automation-artifact --output-template-file packaged-template.yaml
 artifacts:
   type: zip
   files:
     - template.yaml
-    - packaged.yaml
+    - packaged-template.yaml
