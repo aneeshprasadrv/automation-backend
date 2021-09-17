@@ -306,7 +306,7 @@ Resources:
   UserPoolDomain: 
     Type: AWS::Cognito::UserPoolDomain 
     Properties:
-      UserPoolId: !Ref UserPool 
+      UserPoolId: !Ref Userpool 
       Domain: "my-test-user-pool-domain"
   #    CustomDomainConfig: 
   #      CertificateArn: !Ref CertificateArn
