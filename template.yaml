@@ -284,7 +284,7 @@ Resources:
         
         AutoVerifiedAttributes:
           - email
-        UserPoolName: T
+        UserPoolName: buildingblocks-Users-Testing
       
         AdminCreateUserConfig:
           InviteMessageTemplate: 
