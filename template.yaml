@@ -303,11 +303,11 @@ Resources:
       RefreshTokenValidity: 30
       UserPoolId: !Ref Userpool
 
-  UserPoolDomain: 
-    Type: AWS::Cognito::UserPoolDomain 
-    Properties:
-      UserPoolId: !Ref Userpool 
-      Domain: "my-test-user-pool-domain"
+  # UserPoolDomain: 
+  #   Type: AWS::Cognito::UserPoolDomain 
+  #   Properties:
+  #     UserPoolId: !Ref Userpool 
+  #     Domain: "testing-domain-learnlaunch"
   #    CustomDomainConfig: 
   #      CertificateArn: !Ref CertificateArn
 
