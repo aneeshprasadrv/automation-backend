@@ -107,12 +107,12 @@ Resources:
             Path: /api/insert-job-interest
             Method: get
             RestApiId: !Ref ApiDeployment
-        # InsertSchooldata:
-        #   Type: Api 
-        #   Properties:
-        #     Path: /api/insert-schools
-        #     Method: get
-        #     RestApiId: !Ref ApiDeployment
+        InsertSchooldata:
+          Type: Api 
+          Properties:
+            Path: /api/insert-schools
+            Method: get
+            RestApiId: !Ref ApiDeployment
         # InsertInterests:
         #   Type: Api 
         #   Properties:
