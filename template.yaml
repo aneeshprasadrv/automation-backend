@@ -39,18 +39,18 @@ Parameters:
   #   Type: String
   #   Default: Interests_dev
 
-Metadata:
-  AWS::ServerlessRepo::Application:
-    Name: buildingblocks-testing-app
-    Description: buildingblocks
-    Author: buildingblocks
-#    SpdxLicenseId: Apache-2.0
-#    LicenseUrl: LICENSE.txt
-#    ReadmeUrl: README.md
-#    Labels: ['tests']
-    HomePageUrl: https://github.com/aneeshprasadrv/automation-backend
-#    SemanticVersion: 0.0.1
-    SourceCodeUrl: https://github.com/aneeshprasadrv/automation-backend  
+# Metadata:
+#   AWS::ServerlessRepo::Application:
+#     Name: buildingblocks-testing-app
+#     Description: buildingblocks
+#     Author: buildingblocks
+# #    SpdxLicenseId: Apache-2.0
+# #    LicenseUrl: LICENSE.txt
+# #    ReadmeUrl: README.md
+# #    Labels: ['tests']
+#     HomePageUrl: https://github.com/aneeshprasadrv/automation-backend
+# #    SemanticVersion: 0.0.1
+#     SourceCodeUrl: https://github.com/aneeshprasadrv/automation-backend  
 
 Resources:
   buildingblocksFunction:
@@ -82,7 +82,7 @@ Resources:
       #         !Ref BlocksTable
       #   - DynamoDBCrudPolicy:
       #       TableName:
-      #         !Ref InterestsTable
+      #         !Ref InterestsTable 
       Events:
         HealthCheck:
           Type: Api 
@@ -95,12 +95,12 @@ Resources:
         #     Path: /api/main-info
         #     Method: get
         #     RestApiId: !Ref ApiDeployment
-        # InsertBlocks:
-        #   Type: Api 
-        #   Properties:
-        #     Path: /api/insert-blocks
-        #     Method: get
-        #     RestApiId: !Ref ApiDeployment
+        InsertBlocks:
+          Type: Api 
+          Properties:
+             Path: /api/insert-blocks
+             Method: get
+             RestApiId: !Ref ApiDeployment
         # InsertJobinterest:
         #   Type: Api 
         #   Properties:
