@@ -20,6 +20,11 @@ Parameters:
       - prod
       - test
     Default: test
+  
+  UserPoolName:
+    Type: String
+    Default: buildingblocks-testing-pool
+
   # buildingblocksTableName1:
   #   Type: String
   #   Default: Jobinterest_dev
@@ -284,7 +289,7 @@ Resources:
         
         AutoVerifiedAttributes:
           - email
-        UserPoolName: Fn::Join [ "-", [buildingblocks, !Ref Env, 'pipelineartifact'] ]
+        UserPoolName: !Ref UserPoolName
       
         AdminCreateUserConfig:
           InviteMessageTemplate: 
