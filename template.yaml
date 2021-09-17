@@ -20,11 +20,6 @@ Parameters:
       - prod
       - test
     Default: test
-  
-  UserPoolName:
-    Type: String
-    Default: buildingblocks-testing-pool
-
   # buildingblocksTableName1:
   #   Type: String
   #   Default: Jobinterest_dev
@@ -289,7 +284,7 @@ Resources:
         
         AutoVerifiedAttributes:
           - email
-        UserPoolName: !Ref UserPoolName
+        UserPoolName: T
       
         AdminCreateUserConfig:
           InviteMessageTemplate: 
@@ -312,9 +307,9 @@ Resources:
     Type: AWS::Cognito::UserPoolDomain 
     Properties:
       UserPoolId: !Ref UserPool 
-      Domain: "learn-launch-testingsam"
-      # CustomDomainConfig: 
-      #   CertificateArn: !Ref CertificateArn
+      Domain: "my-test-user-pool-domain"
+  #    CustomDomainConfig: 
+  #      CertificateArn: !Ref CertificateArn
 
   # JobsTable:
   #   Type: AWS::DynamoDB::Table
