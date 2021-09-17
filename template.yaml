@@ -284,8 +284,8 @@ Resources:
         
         AutoVerifiedAttributes:
           - email
-        UserPoolName: buildingblocks-Users-Testing
-        
+        UserPoolName: Fn::Join [ "-", [buildingblocks, !Ref Env, 'pipelineartifact'] ]
+      
         AdminCreateUserConfig:
           InviteMessageTemplate: 
             EmailMessage: "Hi. Your username is {username} and temporary password is {####}." 
@@ -302,6 +302,14 @@ Resources:
       GenerateSecret: false
       RefreshTokenValidity: 30
       UserPoolId: !Ref Userpool
+
+  UserPoolDomain: 
+    Type: AWS::Cognito::UserPoolDomain 
+    Properties:
+      UserPoolId: !Ref UserPool 
+      Domain: "learn-launch-testingsam"
+      # CustomDomainConfig: 
+      #   CertificateArn: !Ref CertificateArn
 
   # JobsTable:
   #   Type: AWS::DynamoDB::Table
