@@ -11,10 +11,10 @@ phases:
     commands:
       - sam build
 
-  post-build:
+  post_build:
     commands:
       # Use AWS SAM to package the application by using AWS CloudFormation
-      - aws cloudformation package --template-file template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
+      - aws cloudformation package --template-file .aws-sam/build/template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
 artifacts:
   type: zip
   files:
