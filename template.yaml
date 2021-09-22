@@ -113,12 +113,12 @@ Resources:
             Path: /api/insert-schools
             Method: get
             RestApiId: !Ref ApiDeployment
-        # InsertInterests:
-        #   Type: Api 
-        #   Properties:
-        #     Path: /api/insert-interests
-        #     Method: get
-        #     RestApiId: !Ref ApiDeployment
+        InsertInterests:
+          Type: Api 
+          Properties:
+             Path: /api/insert-interests
+             Method: get
+             RestApiId: !Ref ApiDeployment
         # ListBlocks:
         #   Type: Api 
         #   Properties:
