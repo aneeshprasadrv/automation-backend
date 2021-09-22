@@ -3,13 +3,16 @@ phases:
   install:
     runtime-versions:
         python: 3.8
-  pre_build:
-    commands:
-      - python -m unittest discover tests
+  # pre_build:
+  #   commands:
+  #     - python -m unittest discover tests
 
   build:
     commands:
-      - sam build
+      - pip install --user aws-sam-cli
+      - USER_BASE_PATH=$(python -m site --user-base)
+      - export PATH=$PATH:$USER_BASE_PATH/bin
+      - sam build -t cloudformation.yml
 
   post_build:
     commands:
