@@ -116,12 +116,12 @@ Resources:
              Path: /api/insert-interests
              Method: get
              RestApiId: !Ref ApiDeployment
-        # ListBlocks:
-        #   Type: Api 
-        #   Properties:
-        #     Path: /api/list-blocks
-        #     Method: get
-        #     RestApiId: !Ref ApiDeployment
+        ListBlocks:
+           Type: Api 
+          Properties:
+             Path: /api/list-blocks
+             Method: get
+             RestApiId: !Ref ApiDeployment
         # ListBuckets:
         #   Type: Api 
         #   Properties:
