@@ -6,18 +6,21 @@ phases:
   # pre_build:
   #   commands:
   #     - python -m unittest discover tests
+# Package SAM template
+  # build:
+  #   commands:
+  #     - pip install --user aws-sam-cli
+  #     - USER_BASE_PATH=$(python -m site --user-base)
+  #     - export PATH=$PATH:$USER_BASE_PATH/bin
+  #     - sam build -t cloudformation.yml
 
   build:
     commands:
-      - pip install --user aws-sam-cli
-      - USER_BASE_PATH=$(python -m site --user-base)
-      - export PATH=$PATH:$USER_BASE_PATH/bin
-      - sam build -t cloudformation.yml
-
-  post_build:
-    commands:
       # Use AWS SAM to package the application by using AWS CloudFormation
-      - aws cloudformation package --template-file .aws-sam/build/template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
+      - pip install --user aws-sam-cli
+      - sam package --template-file template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
+      - sam deploy --template-file packaged.yaml --stack-name $StackName --capabilities CAPABILITY_IAM
+
 artifacts:
   type: zip
   files:
