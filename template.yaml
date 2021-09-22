@@ -65,9 +65,9 @@ Resources:
           REGION_NAME: !Ref AWS::Region
           EXEC_ENV: !Ref Env
       Policies:
-      #   - DynamoDBCrudPolicy:
-      #       TableName:
-      #         !Ref JobsTable
+         - DynamoDBCrudPolicy:
+             TableName:
+               !Ref JobsTable
       #   - DynamoDBCrudPolicy:
       #       TableName:
       #         !Ref SchoolsTable
@@ -80,9 +80,6 @@ Resources:
       #   - DynamoDBCrudPolicy:
       #       TableName:
       #         !Ref BlocksTable
-          - DynamoDBCrudPolicy:
-             TableName:
-               !Ref InterestsTable 
       Events:
         HealthCheck:
           Type: Api 
