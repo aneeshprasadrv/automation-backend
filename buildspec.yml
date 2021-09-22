@@ -19,7 +19,7 @@ phases:
       # Use AWS SAM to package the application by using AWS CloudFormation
       - pip install --user aws-sam-cli
       - sam package --template-file template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
-      - sam deploy --template-file packaged.yaml --stack-name $StackName --capabilities CAPABILITY_IAM
+      - sam deploy --template-file packaged-template.yaml --stack-name $StackName --capabilities CAPABILITY_IAM
 
 artifacts:
   type: zip
