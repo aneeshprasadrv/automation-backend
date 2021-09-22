@@ -3,7 +3,15 @@ phases:
   install:
     runtime-versions:
         python: 3.8
+  pre_build:
+    commands:
+      - python -m unittest discover tests
+
   build:
+    commands:
+      - sam build
+
+  post-build:
     commands:
       # Use AWS SAM to package the application by using AWS CloudFormation
       - aws cloudformation package --template-file template.yaml --s3-bucket $S3buildbucket --output-template-file packaged-template.yaml
