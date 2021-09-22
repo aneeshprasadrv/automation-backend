@@ -20,9 +20,9 @@ Parameters:
       - prod
       - test
     Default: test
-  # buildingblocksTableName1:
-  #   Type: String
-  #   Default: Jobinterest_dev
+  buildingblocksTableName1:
+     Type: String
+     Default: Jobinterest_testing
   # buildingblocksTableName2:
   #   Type: String
   #   Default: Schools_dev
@@ -59,12 +59,12 @@ Resources:
       CodeUri: buildingblocks/
       Handler: app.app
       Runtime: python3.8
-      # Environment:
-      #   Variables:
-      #     TABLE_NAME: !Ref buildingblocksTableName1
-      #     REGION_NAME: !Ref AWS::Region
-      #     EXEC_ENV: !Ref Env
-      # Policies:
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref buildingblocksTableName1
+          REGION_NAME: !Ref AWS::Region
+          EXEC_ENV: !Ref Env
+      Policies:
       #   - DynamoDBCrudPolicy:
       #       TableName:
       #         !Ref JobsTable
@@ -80,9 +80,9 @@ Resources:
       #   - DynamoDBCrudPolicy:
       #       TableName:
       #         !Ref BlocksTable
-      #   - DynamoDBCrudPolicy:
-      #       TableName:
-      #         !Ref InterestsTable 
+          - DynamoDBCrudPolicy:
+             TableName:
+               !Ref InterestsTable 
       Events:
         HealthCheck:
           Type: Api 
@@ -311,19 +311,19 @@ Resources:
   #    CustomDomainConfig: 
   #      CertificateArn: !Ref CertificateArn
 
-  # JobsTable:
-  #   Type: AWS::DynamoDB::Table
-  #   Properties:
-  #     TableName: !Ref buildingblocksTableName1
-  #     AttributeDefinitions:
-  #       - AttributeName: id
-  #         AttributeType: S
-  #     KeySchema:
-  #       - AttributeName: id
-  #         KeyType: HASH
-  #     ProvisionedThroughput:
-  #       ReadCapacityUnits: 10
-  #       WriteCapacityUnits: 10
+  JobsTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+       TableName: !Ref buildingblocksTableName1
+       AttributeDefinitions:
+         - AttributeName: id
+           AttributeType: S
+       KeySchema:
+         - AttributeName: id
+           KeyType: HASH
+       ProvisionedThroughput:
+         ReadCapacityUnits: 10
+         WriteCapacityUnits: 10
   
   # SchoolsTable:
   #   Type: AWS::DynamoDB::Table
